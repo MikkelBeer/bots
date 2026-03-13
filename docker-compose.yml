@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  discord-bot:
+    build: .
+    restart: always
+    env_file:
+      - .env
+    # We zorgen dat de bot intern op poort 8000 luistert
+
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    restart: always
+    # Vervang JOUW_TOKEN door het token uit je screenshot
+    command: tunnel run --token JOUW_TOKEN_HIER
