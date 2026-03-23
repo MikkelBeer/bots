@@ -86,7 +86,7 @@ async def github_webhook_handler(request):
                     else:
                         embed.description = f"**{user}** heeft het veld `{field_name}` aangepast."
                 else:
-                    embed.description = f"**{user}** heeft een item op het bord bijgewerkt."
+                    embed.description = f"**{user}** heeft een item op het bord bijgewerkt!"
             
             else:
                 return web.Response(text="Action ignored", status=200)
